@@ -1,0 +1,50 @@
+[user]
+        email = 1benediktwerner@gmail.com
+        name = Benedikt Werner
+[core]
+        preloadindex = true
+        fscache = true
+        autocrlf = false
+        safecrlf = false
+        excludesfile = ~/.gitignore
+        eol = lf
+[init]
+        defaultBranch = "master"
+[alias]
+        s = status
+        c = commit -v
+        ac = commit -av
+        ca = commit -v --amend
+        aca = commit -av --amend
+        co = checkout
+        com = checkout master
+        cob = checkout -b
+        a = add -u
+        aa = add -A
+        ap = add -p
+        d = diff
+        dc = diff --cached
+        r = remote -v
+        b = branch
+        f = fetch
+        fup = fetch upstream
+        rup = reset --hard @{upstream}
+        frup = !git fetch upstream && git reset --hard @{upstream} && :
+        pullr = pull --rebase
+        pushh = push origin HEAD
+        pushm = push upstream master
+        last = log -1 HEAD
+        graph = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative
+        bu= !git branch -u origin/$(git rev-parse --abbrev-ref HEAD) && :
+[push]
+        default = simple
+[help]
+        autoCorrect = 1
+[url "git@github.com:"]
+        insteadOf = gh:
+[diff]
+        colorMoved = default
+        algorithm = patience
+        compactionHeuristic = true
+[pull]
+        ff = only
