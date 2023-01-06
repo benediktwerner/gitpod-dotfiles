@@ -8,4 +8,4 @@ if test ! -e /ide/bin/gitpod-code || test ! -v GITPOD_REPO_ROOT; then {
 } fi
 
 _source_dir="$(readlink -f "$0")" && _source_dir="${_source_dir%/*}";
-mv "$_source_dir/dotfiles/*" "$HOME/"
+mv "$_source_dir/dotfiles/"* "$HOME/"
